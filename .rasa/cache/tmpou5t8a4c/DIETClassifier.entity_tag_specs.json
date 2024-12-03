@@ -1,0 +1,28 @@
+[
+  {
+    "tag_name": "entity",
+    "ids_to_tags": {
+      "1": "B-event",
+      "2": "I-event",
+      "3": "L-event",
+      "4": "U-event",
+      "5": "B-seats",
+      "6": "I-seats",
+      "7": "L-seats",
+      "8": "U-seats",
+      "0": "O"
+    },
+    "tags_to_ids": {
+      "B-event": 1,
+      "I-event": 2,
+      "L-event": 3,
+      "U-event": 4,
+      "B-seats": 5,
+      "I-seats": 6,
+      "L-seats": 7,
+      "U-seats": 8,
+      "O": 0
+    },
+    "num_tags": 9
+  }
+]

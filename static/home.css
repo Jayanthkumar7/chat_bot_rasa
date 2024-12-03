@@ -1,0 +1,126 @@
+.img {
+    width: 100%;
+    height: 800px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative; 
+}
+
+.container {
+    z-index: 1; 
+    background-color: rgba(0, 0, 0, 0.6); 
+    width: 100%; 
+    height: 100%; 
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+
+.text {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: white;
+    font-size: 50px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    z-index: 2; 
+}
+
+.button{
+    margin: 30px 0px;
+    background-color: #ec3330;
+ 
+    border: none;
+    border-radius: 10px;
+    padding: 20px 40px;
+    color: white;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.button:hover{
+   background-color: #ef5350;
+
+}
+.button:active{
+    background-color: #f44946;
+
+}
+
+.containers{
+    width: 270px;
+    height: 400px;
+    cursor: pointer;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    transition: box-shadow 0.7s ease;
+    transition: transform 0.7s ease;
+}
+
+.containers:hover{
+    box-shadow: 0 0 11px rgba(33,33,33,.2);
+    transform: scale(1.02);
+}
+
+.images_container{
+    width:100%;
+    border-radius: 10px 10px 0px 0px;
+    height: 45%;
+    object-fit: cover;
+}
+
+.images_container:hover{
+    transform: scale(1.02);
+    transition-duration: 0.7s;
+}
+
+.name{
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    margin: 5px 0px;
+}
+.info{
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+}
+
+.description{
+    font-size: small;
+    margin: 15px 0px;
+}
+.price{
+    margin: 5px 0px;
+    font-size: small;
+    font-weight: bolder;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr ;
+    margin:100px 180px;
+}
+
+.redirect{
+    background-color:#1e2b3a ;
+    border: none;
+    padding:10px;
+    border-radius: 10px;
+    margin: 30px 0px;
+    cursor: pointer;
+    font-size: 16px;
+    color: white;
+}
+
+.redirect:hover{
+    opacity: 0.9;
+}
+
+.redirect:active{
+    opacity:0.8;
+}

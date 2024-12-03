@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block content %}
+<link rel="stylesheet" href="{{ url_for('static', filename='home.css') }}">
+<body>
+    <div class="img" style="background-image: url('{{ url_for('static', filename='img/image_2.jpg') }}');">
+        <div class="container">
+            <p class="text">
+                Your Gateway to Events, Museums in the Easiest Way
+                <a href="{{url_for('events')}}"><button class='button' >Explore Events</button></a>
+            </p>
+        </div>
+    </div>
+
+    <div class="grid">
+        {% for event in events %}
+        <div class="containers">
+                <!-- <img src="{{url_for('static',filename='img/image_2.jpg')}}" alt="" class="images_container"> -->
+            <img class="images_container" src="{{ url_for('event_image', event_id=event.id) }}" alt="{{ event.ename }}">
+
+            <div class="info">
+                <p class="name">{{event.ename}}</p>
+                <p class="description">{{event.description[:100]}}</p>
+                <p class="price">&#8377 {{event.t_price}}</p>
+                <a href="{{url_for('event_details',event_id=event.id)}}"><button class="redirect">View details</button></a>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</body>
+{% endblock %}

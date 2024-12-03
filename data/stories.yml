@@ -1,0 +1,37 @@
+version: "3.1"
+
+stories:
+  - story: greet and happy mood
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: mood_great
+      - action: utter_happy
+
+  - story: book ticket flow
+    steps:
+      - intent: book_ticket
+      - action: collect_details
+      - checkpoint: confirm_the_details
+
+  - story: confirm the booking
+    steps:
+      - checkpoint: confirm_the_details
+      - intent: affirm
+      - action: utter_confirm
+
+  - story: deny the booking
+    steps:
+      - checkpoint: confirm_the_details
+      - intent: deny
+      - action: utter_denial
+
+  - story:  welcome message
+    steps:
+      - intent: welcome_message
+      - action: utter_welcome_message
+
+  - story: goodbye
+    steps:
+      - intent: goodbye
+      - action: utter_goodbye

@@ -1,0 +1,60 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - bot_challenge
+  - book_ticket
+  - welcome_message
+
+actions:
+  - collect_details
+
+entities:
+  - seats
+  - event
+
+slots:
+  event:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: event
+
+  seats:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: seats
+
+responses:
+
+  utter_welcome_message:
+    -text: i am so glad that you are happy visit the website anytime you want !
+    
+  utter_greet:
+    - text: "Hey! How are you?"
+
+  utter_confirm:
+    - text: "Thank you for booking!"
+
+  utter_denial:
+    - text: "Are you out of your mind!"
+
+  utter_happy:
+    - text: "Great, carry on!"
+
+  utter_goodbye:
+    - text: "Bye"
+
+  utter_iamabot:
+    - text: "I am Snow, a personalized bot to assist and book a quick ticket for you!"
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

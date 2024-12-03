@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{active_page}}</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='style.css')}}">
+    <link rel="shortcut icon" href="{{url_for('static',filename='img/logo.png')}}" type="image/x-icon">
+</head> 
+<body>
+    <header>
+        <div class="logo">
+            <a href="{{url_for('home')}}"><img src="{{url_for('static',filename='img/logo.png')}}" alt="Logo"></a>
+            <span>Mticket</span>
+        </div>
+        <nav>
+            <ul>
+                <a href="{{url_for('home')}}" class="{% if active_page == 'home' %}active{% endif %}" ><li>Home</li></a>
+                <a href="{{url_for('portfolio')}}" class="{% if active_page == 'portfolio' %}active{% endif %}" ><li>Portfolio</li></a>
+                <a href="{{url_for('events')}}" class="{% if active_page == 'events' %}active{% endif %}" ><li>Events</li></a>
+                {% if not current_user.is_authenticated %}
+                <a href="{{url_for('login')}}" class="{% if active_page == 'login' %}active{% endif %}" ><li>Login</li></a>
+                <a href="{{url_for('signup')}}" class="{% if active_page == 'signup' %}active{% endif %}" ><li>Signup</li></a>
+                {% endif %}
+                {% if  current_user.is_authenticated %}
+                <a href="{{url_for('bookings')}}" class="{% if active_page == 'bookings' %}active{% endif %}" ><li>Bookings</li></a>
+                <a href="{{url_for('logout')}}" class="{% if active_page == 'logout' %}active{% endif %}" ><li>Logout</li></a>
+
+                {% endif %}
+            </ul>
+        </nav>
+    </header>
+{% block content %}
+{% endblock %}
+    <footer>
+        <p>Copyright © 2024 Book Ticket</p>
+    </footer>
+</body>
+</html>

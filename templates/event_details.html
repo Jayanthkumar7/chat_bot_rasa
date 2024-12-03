@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block content %}
+<link rel="stylesheet" href="{{url_for('static',filename='event_details.css')}}">
+
+
+
+<div class="container">
+    <div class="image_details">
+
+        <p class="name">{{event_details.ename}}</p>
+        <img class='act_image' src="{{url_for('event_image',event_id=event_details.id)}}" alt="event_details.ename">
+    </div>
+
+    <div class="info">
+        <p class="description">{{event_details.description}}</p>
+        <p class="price">&#8377 {{event_details.t_price}}</p>
+        <form action="" method="post">
+            <input type="number" name="no_of_tickets" id="count" min="1" max="10" value='1'>
+            <input type="submit" value="Proceed">
+        </form>
+    </div>
+</div>
+
+
+{% endblock %}

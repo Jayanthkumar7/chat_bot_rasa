@@ -1,0 +1,105 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: book_ticket
+  examples: |
+    - i want to book a ticket
+    - i want to book [1](seats) ticket for the event [Hyderabad Food Fest 2024](event)
+    - i want to book for the event [Hyderabad Food Fest 2024](event)
+    - what are the events that are present
+    - can you book a ticket for me
+    - book ticket
+    - can i find some [5](seats) tickets for an event
+    - book [10](seats) tickets for me
+    - [3](seats)
+    - [9](seats)
+    - [Hyderabad Food Fest 2024](event)
+    - [hyd](event)
+    - [food fest](event)
+    - I want to book a ticket
+    - I want to book [1](seats) ticket for the event [Hyderabad Food Fest 2024](event)
+    - I want to book [4](seats) tickets for [Music Festival](event)
+    - Book a ticket for [Comedy Show](event)
+    - Can you book [3](seats) tickets for the event [Theater Play](event)?
+    - Can I book a ticket for [XYZ](event) with [4](seats)?
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+
+
+- intent: welcome_message
+  examples: |
+    - welcome
+    - thanks for the ticket
+    - i am so glad
+    - thank you for the support
+    - you have made my day !
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?

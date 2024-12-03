@@ -1,0 +1,32 @@
+.container {
+    margin-top: 50px;
+}
+
+.checkout-card {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.checkout-card img {
+    max-height: 300px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.info p {
+    font-size: 18px;
+}
+
+.checkout_bt button {
+    background-color: #28a745;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+}
+
+.checkout_bt button:hover {
+    background-color: #218838;
+}

@@ -1,0 +1,81 @@
+
+.container {
+    margin: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.form-box {
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    width: 400px;
+}
+
+.form-box h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+}
+
+.input-box {
+    margin-bottom: 15px;
+}
+
+.input-box input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+}
+
+.input-box input:focus {
+    border-color: #4a6ff0;
+}
+
+.checkbox {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.checkbox input {
+    margin-right: 10px;
+}
+
+.checkbox label {
+    font-size: 14px;
+    color: #555;
+}
+
+.btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #4a6ff0;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #3b57c4;
+}
+
+.login-link {
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+.login-link a {
+    color: #4a6ff0;
+    text-decoration: none;
+}
+
+.login-link a:hover {
+    text-decoration: underline;
+}
